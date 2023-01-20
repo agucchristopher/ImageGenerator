@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Generator</title>
+    <link href="./css/index.css" rel="stylesheet" />
+    <script src="./js/index.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container container-md">
+      <h1>Image Generator</h1>
+      <!-- <h2>With Dall-E</h2> -->
+
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="prompt"
+                placeholder="Describe Image..."
+              />
+              <label for="floatingInput">Describe Image</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-floating">
+              <select class="form-select" id="size">
+                <!-- <option selected>Default</option> -->
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <label for="floatingSelectGrid">Size</label>
+            </div>
+            <div class="d-grid gap-2">
+              <button
+                onclick="onSubmit()"
+                class="btn rounded-3 mt-3 btn-primary"
+                type="button"
+              >
+                Generate Image
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-gTAfkEbuJLyaMXsABG6rBt5y/user-75UCo0VIkDmaOMPNUwEa0uaU/img-ubIlhm9gmmzvU7g0GlI3m2Am.png?st=2022-12-16T11%3A34%3A07Z&se=2022-12-16T13%3A34%3A07Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-16T10%3A35%3A55Z&ske=2022-12-17T10%3A35%3A55Z&sks=b&skv=2021-08-06&sig=d8h6xgngHfHtqRuK1d4qcbZfNPXpxhCOgXxGK73MywQ%3D"
+        class="image"
+        alt=""
+        id="image"
+      />
+    </div>
+  </body>
+</html>
