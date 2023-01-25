@@ -21,7 +21,7 @@ async function generateImageRequest(prompt, size) {
     );
 
     let data = await response.json();
-    console.log("data", data);
+    alert(JSON.Stringify(data));
 
     if (!response.ok) {
       removeSpinner();
@@ -40,11 +40,11 @@ async function generateImageRequest(prompt, size) {
 }
 
 function showSpinner() {
-  //   document.querySelector(".spinner").classList.add("show");
+  document.querySelector(".loader").classList.add("show");
 }
 
 function removeSpinner() {
-  //   document.querySelector(".spinner").classList.remove("show");
+  document.querySelector(".loader").classList.add("hide");
 }
 
 // document.querySelector("#image-form").addEventListener("submit", onSubmit);
