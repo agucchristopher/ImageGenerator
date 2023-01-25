@@ -11,7 +11,7 @@ async function generateImageRequest(prompt, size) {
     let bodyContent = `prompt=${prompt}`;
 
     let response = await fetch(
-      "http://openai-nodejs-api.vercel.app/ai/createimage",
+      "http://openai-nodejs-api.cyclic.app/ai/createimage",
 
       {
         method: "POST",
