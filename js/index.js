@@ -1,26 +1,26 @@
-async function generateImageRequest(prompt, size) {
+const generateImageRequest = async (prompt, size) => {
   try {
     showSpinner();
-Alert('Function Called') 
+    Alert('Function Called') 
     let headersList = {
       Accept: "*/*",
       "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-      "Content-Type": "application/x-www-form-urlencoded",
+      "Content-Type": "application/json",
     };
 
-    let bodyContent = `prompt = ${prompt}`;
+    let bodyContent = { prompt };
 
     let response = await fetch(
       "https://openai-nodejs-api.cyclic.app/ai/createimage",
       {
         method: "POST",
-        body: bodyContent,
+        body: JSON.Stringify(bodyContent),
         headers: headersList,
       }
     );
 
     let data = await response.json();
-    alert(JSON.Stringify(data));
+    //alert(JSON.Stringify(data));
 
     if (!response.ok) {
       removeSpinner();
