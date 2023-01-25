@@ -22,8 +22,6 @@
   }
 }
 body {
-}
-body {
   background: #1C2534;
 }
 
@@ -35,26 +33,4 @@ body {
 }
 
 
-.loading {
-  display: flex;
-  transform: scale(4);
-}
 
-.loading .ball {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 0.5rem;
-  animation
-  transition: transform 0.3s infinite;
-}
-
-.ball + .ball {
-  margin-left: 0.4rem;
-}
-
-.loading .ball.one {
-  animation: loadingBall 0.5s infinite alternate;
-  background: #FF592930;
-}
-.loading .ball.two {
-  animation: loadingBall2 0.5s infinite 0.2s alternate;
