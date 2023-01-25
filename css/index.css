@@ -26,9 +26,9 @@ body {
 }
 
 .container {
-  height: 100vh;
   place-items: center;
 }
-
-
+.hide {
+ display: none; 
+}
 
