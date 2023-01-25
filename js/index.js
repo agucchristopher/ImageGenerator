@@ -11,7 +11,7 @@ async function generateImageRequest(prompt, size) {
     let bodyContent = `prompt=${prompt}`;
 
     let response = await fetch(
-      "http://openai-nodejs-api.cyclic.app/ai/createimage",
+      "https://openai-nodejs-api.cyclic.app/ai/createimage",
 
       {
         method: "POST",
@@ -35,7 +35,7 @@ async function generateImageRequest(prompt, size) {
 
     removeSpinner();
   } catch (error) {
-    console.log(error);
+    Alert(error.message);
   }
 }
 
