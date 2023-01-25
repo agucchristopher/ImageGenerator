@@ -8,8 +8,8 @@ const generateImageRequest = async (prompt, size) => {
       "Content-Type": "application/json",
     };
 
-    let bodyContent = `{ prompt: ${prompt} }`;
-    alert(bodyContent)
+    let bodyContent = `{ prompt: "${prompt}" }`;
+    alert(JSON.Stringify(bodyContent))
     let response = await fetch(
       "https://openai-nodejs-api.cyclic.app/ai/createimage",
       {
