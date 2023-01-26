@@ -20,7 +20,7 @@ const generateImageRequest = async (prompt, size) => {
     );
 
     let data = await response.json();
-    alert(data.status);
+    alert('received');
 
     if (!response.ok) {
       removeSpinner();
@@ -39,7 +39,7 @@ const generateImageRequest = async (prompt, size) => {
 }
 
 function showSpinner() {
-  document.querySelector(".loader").classList.add("");
+  document.querySelector(".loader").classList.remove("hide");
 }
 
 function removeSpinner() {
@@ -48,8 +48,8 @@ function removeSpinner() {
 
 // document.querySelector("#image-form").addEventListener("submit", onSubmit);
 function onSubmit() {
-   document.querySelector(".prompt").textContent = "";
-   document.querySelector("#image").src = "";
+   //document.querySelector(".prompt").textContent = "";
+   //document.querySelector("#image").src = "";
 
   const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
