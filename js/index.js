@@ -14,7 +14,7 @@ const generateImageRequest = async (prompt, size) => {
       "https://openai-nodejs-api.cyclic.app/ai/createimage",
       {
         method: "POST",
-        body: JSON.Stringify(bodyContent),
+        body: bodyContent,
         headers: headersList,
       }
     );
@@ -24,7 +24,7 @@ const generateImageRequest = async (prompt, size) => {
 
     if (!response.ok) {
       removeSpinner();
-      throw new Error("That image could not be generated");
+      alert("That image could not be generated");
     }
 
     const imageUrl = data.image;
