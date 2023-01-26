@@ -9,7 +9,7 @@ const generateImageRequest = async (prompt, size) => {
     };
 
     let bodyContent = { prompt: prompt};
-    alert(JSON.Stringify(bodyContent))
+    alert('Sent')
     let response = await fetch(
       "https://openai-nodejs-api.cyclic.app/ai/createimage",
       {
@@ -20,7 +20,7 @@ const generateImageRequest = async (prompt, size) => {
     );
 
     let data = await response.json();
-    //alert(JSON.Stringify(data));
+    alert(data.status);
 
     if (!response.ok) {
       removeSpinner();
@@ -30,7 +30,7 @@ const generateImageRequest = async (prompt, size) => {
     const imageUrl = data.image;
     console.log("img", imageUrl);
 
-    document.querySelector(".image").src = imageUrl;
+    document.querySelector("#image").src = imageUrl;
 
     removeSpinner();
   } catch (error) {
@@ -39,7 +39,7 @@ const generateImageRequest = async (prompt, size) => {
 }
 
 function showSpinner() {
-  document.querySelector(".loader").classList.add("show");
+  document.querySelector(".loader").classList.add("");
 }
 
 function removeSpinner() {
@@ -48,8 +48,8 @@ function removeSpinner() {
 
 // document.querySelector("#image-form").addEventListener("submit", onSubmit);
 function onSubmit() {
-  //   document.querySelector(".prompt").textContent = "";
-  //   document.querySelector(".image").src = "";
+   document.querySelector(".prompt").textContent = "";
+   document.querySelector("#image").src = "";
 
   const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
