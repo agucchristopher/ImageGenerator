@@ -10,7 +10,7 @@ const generateImageRequest = async (prompt, size) => {
 
    let bodyContent = { prompt: `${prompt}`};
     alert(bodyContent.prompt)
-    let response = await fetch(
+    let response = fetch(
       "https://super-apron-wasp.cyclic.app/ai/createimage",
       {
         method: "POST",
