@@ -11,7 +11,7 @@ const generateImageRequest = async (prompt, size) => {
    let bodyContent = { prompt: `${prompt}`};
     alert('Sent')
     let response = await fetch(
-      "https://openai-nodejs-api.cyclic.app/ai/createimage",
+      "https://super-apron-wasp.cyclic.app/ai/createimage",
       {
         method: "POST",
         body: JSON.Stringify(bodyContent),
