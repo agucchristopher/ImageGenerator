@@ -58,5 +58,5 @@ function onSubmit() {
     return;
   }
 
-  generateImageRequest(prompt, size);
+  generateImageRequest(prompt, size.toLowerCase());
 }
