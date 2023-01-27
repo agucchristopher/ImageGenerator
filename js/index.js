@@ -19,7 +19,7 @@ const generateImageRequest = async (prompt, size) => {
       }
     );
 
-    let data = response.json();
+    let data = await response.json();
     alert('received');
 
     if (!response.ok) {
@@ -28,7 +28,7 @@ const generateImageRequest = async (prompt, size) => {
     }
 
     const imageUrl = data.image;
-    console.log("img", imageUrl);
+    alert(imageUrl);
 
     document.querySelector("#image").src = imageUrl;
 
