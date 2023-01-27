@@ -14,7 +14,7 @@ const generateImageRequest = async (prompt, size) => {
       "https://openai-nodejs-api.cyclic.app/ai/createimage",
       {
         method: "POST",
-        body: { prompt },
+        body: { "prompt": prompt },
         headers: headersList,
       }
     );
