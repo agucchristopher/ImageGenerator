@@ -15,7 +15,7 @@ const generateImageRequest = async (prompt, size) => {
       {
         method: "POST",
         body: JSON.Stringify(bodyContent),
-       // headers: headersList,
+        headers: headersList,
       }
     );
 
@@ -34,7 +34,7 @@ const generateImageRequest = async (prompt, size) => {
 
     removeSpinner();
   } catch (error) {
-    Alert(error.message);
+    alert(error.message);
   }
 }
 
