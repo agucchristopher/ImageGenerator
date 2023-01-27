@@ -1,7 +1,7 @@
 const generateImageRequest = async (prompt, size) => {
   try {
     showSpinner();
-    alert('Function Called') 
+  //  alert('Function Called') 
     let headersList = {
       Accept: "*/*",
       "User-Agent": "Thunder Client (https://www.thunderclient.com)",
