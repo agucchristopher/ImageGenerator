@@ -9,7 +9,7 @@ const generateImageRequest = async (prompt, size) => {
     };
 
    let bodyContent = { prompt: `${prompt}`};
-    alert(bodyContent.prompt)
+    //alert(bodyContent.prompt)
     let response = await fetch(
       "https://super-apron-wasp.cyclic.app/ai/createimage",
       {
@@ -20,7 +20,7 @@ const generateImageRequest = async (prompt, size) => {
     );
 
     let data = await response.json();
-    alert('received');
+    //alert('received');
 
     if (!response.ok) {
       removeSpinner();
@@ -28,7 +28,7 @@ const generateImageRequest = async (prompt, size) => {
     }
 
     const imageUrl = data.image;
-    alert(imageUrl);
+    //alert(imageUrl);
 
     document.querySelector("#image").src = imageUrl;
 
@@ -49,8 +49,7 @@ function removeSpinner() {
 // document.querySelector("#image-form").addEventListener("submit", onSubmit);
 function onSubmit() {
    //document.querySelector(".prompt").textContent = "";
-   //document.querySelector("#image").src = "";
-
+  document.querySelector("#image").src = "";
   const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
 
