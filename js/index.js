@@ -1,6 +1,6 @@
 const generateImageRequest = async (prompt, size) => {
   try {
-    showSpinner();
+    //showSpinner();
   //  alert('Function Called') 
     let headersList = {
       Accept: "*/*",
@@ -49,8 +49,8 @@ function removeSpinner() {
 // document.querySelector("#image-form").addEventListener("submit", onSubmit);
 function onSubmit() {
    //document.querySelector(".prompt").textContent = "";
-  document.querySelector("#image").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAACVBMVEX////j4+PLy8v8ff+0AAABAElEQVR4nO3PAREAMAgAIbV/6OVg9zRgbv92s/O3bchr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvoa+hr6Gvo27n92z0D6AOFtywFzwAAAABJRU5ErkJggg==";
-  const prompt = document.querySelector("#prompt").value;
+  document.querySelector("#image").src = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921'
+ const prompt = document.querySelector("#prompt").value;
   const size = document.querySelector("#size").value;
 
   if (prompt === "") {
