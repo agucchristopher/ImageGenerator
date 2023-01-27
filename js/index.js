@@ -14,7 +14,7 @@ const generateImageRequest = async (prompt, size) => {
       "https://super-apron-wasp.cyclic.app/ai/createimage",
       {
         method: "POST",
-        body: JSON.Stringify(bodyContent),
+        body: JSON.stringify(bodyContent),
         headers: headersList,
       }
     );
